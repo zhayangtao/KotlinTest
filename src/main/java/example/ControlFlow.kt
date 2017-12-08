@@ -15,7 +15,6 @@ private fun testIfExpression() {
     } else {
         3
     }
-
 }
 
 fun fooTest(str: String): Int = when (str) {
@@ -28,6 +27,7 @@ fun fooTest(str: String): Int = when (str) {
 fun main(args: Array<String>) {
     System.out.println("Hello Java")
     println("Hello Kotlin")
+    testWhileLoops()
 }
 
 fun hasPrefix(x: Any) = when(x) {
@@ -59,7 +59,7 @@ private fun testForLoops() {
 private fun testWhileLoops() {
     var x = 100
     while (x > 0) {
-        x--
+        println(x--)
     }
     do {
         val y: Int? = null

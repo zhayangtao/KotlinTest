@@ -9,6 +9,7 @@ import java.nio.file.Paths
 /**
  * @author zhayangtao
  * 2017/12/5
+ * 习语
  */
 // 函数默认值
 private fun foo(a: Int = 0, b: String = "", c: Long) {
@@ -110,10 +111,10 @@ fun arrayOfMinusOnes(size: Int): IntArray {
 }
 
 // 简单表达式函数
-fun theAnswer()  = 42
+fun theAnswer()  = "the answer is blowing in the wind"
 //等价于
-fun theAnswer2(): Int {
-    return 42
+fun theAnswer2(): String {
+    return "the answer is blowing in the wind"
 }
 
 // 在 "with" 中调用类的多个方法
@@ -123,7 +124,7 @@ class Turtle {
     fun turn(degrees: Double) {}
     fun forward(pixels: Double) {}
 }
-
+// test with
 fun testWith() {
     val myTurtle = Turtle()
     with(myTurtle) {
@@ -139,8 +140,8 @@ fun testWith() {
 // java7 try resources
 fun testTryResources() {
     val stream = Files.newInputStream(Paths.get("F:\\blog\\source\\_posts\\Untitled-1.txt"))
-    stream.buffered().reader().use { reader -> {
-        println(reader.readText())
+    stream?.buffered()?.reader().use { reader -> {
+        println(reader?.readText())
     } }
 }
 

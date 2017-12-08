@@ -18,9 +18,9 @@ var aVar: Int? = null
 
 //明确的原型
 val bInt: Int? = 1
-//val b: Long? = bInt
+//val b: Long? = bInt  //error
 val bByte: Byte = 1
-//val i: Int = bByte
+//val i: Int = bByte   //error
 val i: Int = bByte.toInt()
 val longType = 1L + 3
 val x = (1 shl 2)
@@ -29,7 +29,7 @@ val x = (1 shl 2)
 fun main(args: Array<String>) {
     println(oneMillion)//1000000
     println(a === a)//true
-    // === 比较对象
+    // === 比较对象地址
     println(boxedA === anotherBoxedA)//false
     // == 符号比较内容
     println(boxedA == anotherBoxedA)//true

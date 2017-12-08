@@ -4,7 +4,7 @@ package example
  * @author zhayangtao
  * @since 2017/12/6
  * @version 1.0
- * 习惯编码
+ * 习惯编码用法
  */
 // 冒号
 interface Foo<out T : Any> {
@@ -13,7 +13,7 @@ interface Foo<out T : Any> {
 
 // lambda
 private fun testLambda() {
-    val list = listOf<String>("apple", "babana", "orange")
+    val list = listOf<String>("apple", "banana", "orange")
     list.filter { it.startsWith("a") }.map {it -> it.toUpperCase() }
 }
 
@@ -21,7 +21,7 @@ private fun testLambda() {
 private class Person(id: Int, name: String?)
 
 // 继承
-open class Human(id: Int, name: String)
+private open class Human(id: Int, name: String)
 private class Student(id: Int, name: String) : Human(id, name)
 
 // 返回 unit

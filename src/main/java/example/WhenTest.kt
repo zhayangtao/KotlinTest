@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
     testOutOfRange()
 }
 
-fun cases(obj: Any) {
+private fun cases(obj: Any) {
     when (obj) {
         1 -> {
             println("One")
@@ -29,7 +29,7 @@ fun cases(obj: Any) {
     }
 }
 
-class MyClass() {
+private class MyClass() {
 
     var size = null
     var allBY: Int? = null
@@ -43,7 +43,7 @@ class MyClass() {
 }
 
 // 使用string模板
-fun testStringTemplate() {
+private fun testStringTemplate() {
     var a = 1
     // simple name in template:
     val s1 = "a is $a"
@@ -54,7 +54,7 @@ fun testStringTemplate() {
 }
 
 //使用if表达式
-fun maxOf(a: Int, b: Int) = if (a > b) a else b
+private fun maxOf(a: Int, b: Int) = if (a > b) a else b
 
 // 使用nullable 表达式并且检查null，如果string不包含integer则返回null
 private fun parseInt(string: String): Int? {
@@ -93,7 +93,7 @@ private fun testWhileLoop() {
 }
 
 // 使用when
-fun describe(obj: Any): String =
+private fun describe(obj: Any): String =
         when (obj) {
             1 -> "One"
             "hello" -> "Greeting"
@@ -104,7 +104,7 @@ fun describe(obj: Any): String =
 
 
 // 使用ranges
-fun testRange() {
+private fun testRange() {
     val x = 10
     val y = 9
     if (x in 1 until y + 1) {
@@ -113,7 +113,7 @@ fun testRange() {
 }
 
 // 检查数字是否越界
-fun testOutOfRange() {
+private fun testOutOfRange() {
     val list = listOf<String>("a", "b", "c")
     if (-1 !in 0..list.lastIndex) {
         println("-1 is out of range")
@@ -134,7 +134,7 @@ fun testOutOfRange() {
 }
 
 // 使用集合
-fun testCollections() {
+private fun testCollections() {
     val items = listOf("a", "b", "c")
     for (item in items) {
         //...
@@ -152,16 +152,16 @@ private fun testLambda() {
 }
 
 // 使用类
-abstract class Shape(private val sides: List<Double>) {
+private abstract class Shape(private val sides: List<Double>) {
     val perimeter: Double get() = sides.sum()
     abstract fun calculateArea(): Double
 }
 
-interface RectangleProperties {
+private interface RectangleProperties {
     val isSquare: Boolean
 }
 
-class Rectangle(private var height: Double, private var length: Double): Shape(listOf(height, length, height, length)), RectangleProperties {
+private class Rectangle(private var height: Double, private var length: Double): Shape(listOf(height, length, height, length)), RectangleProperties {
     override fun calculateArea(): Double {
         TODO()
     }
@@ -171,7 +171,7 @@ class Rectangle(private var height: Double, private var length: Double): Shape(l
 
 }
 
-class Triangle(var sideA: Double, var sideB: Double, var sideC: Double): Shape(listOf(sideA, sideB, sideC)) {
+private class Triangle(var sideA: Double, var sideB: Double, var sideC: Double): Shape(listOf(sideA, sideB, sideC)) {
     override fun calculateArea(): Double {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }

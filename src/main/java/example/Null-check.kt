@@ -2,7 +2,8 @@ package example
 
 /**
  * @author zhayangtao
- * 2017/12/5
+ * @since 2017/12/5
+ * @version 1.0
  */
 fun main(args: Array<String>) {
     val x = parseInt("2")

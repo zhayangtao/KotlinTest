@@ -19,7 +19,7 @@ fun main(args: Array<String>) {
     val (name, age) = jane
     println("$name, $age years of age")
 
-    var customer = Customer(name = "a", email = "a")
+    val customer = Customer(name = "a", email = "a")
     customer.email = "a";
 
 }
