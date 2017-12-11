@@ -104,7 +104,14 @@ private open class DeclareC {
         d.foo() // 调用扩展函数
     }
 }
+private class DeclareAnotherC {
+    fun DeclareD.foo() {
+        toString()
+        this@DeclareAnotherC.toString() //
+    }
+}
 
+// 扩展成员可以被子类重写覆盖，会根据实际传入的参数调用方法，而不是方法声明
 private class DeclareC1 : DeclareC() {
     override fun DeclareD.foo() {
 
